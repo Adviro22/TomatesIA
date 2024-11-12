@@ -1,0 +1,36 @@
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/detection.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="detection-container">
+    <h2>Clasificación de Tomates</h2>
+    <p>Sube una imagen de un tomate para clasificar si es rojo o verde.</p>
+    
+    <!-- Formulario de clasificación con AJAX -->
+    <form id="classification-form" enctype="multipart/form-data">
+        <label for="file-upload" class="custom-file-upload">Elegir archivo</label>
+        <input id="file-upload" type="file" name="image" accept="image/*" required onchange="previewImage(event)">
+        <button type="button" class="btn-classify" onclick="classifyImage()">Clasificar Tomate</button>
+    </form>
+    
+    <!-- Contenedor de vista previa de la imagen -->
+    <div id="image-preview-container" style="display: none; margin-top: 15px;">
+        <h3>Vista previa de la imagen:</h3>
+        <img id="image-preview" src="#" alt="Vista previa" style="max-width: 100%; border-radius: 8px;">
+    </div>
+    
+    <!-- Contenedor de resultados -->
+    <div id="result-container" class="result" style="display: none;">
+        <h3>Resultado de Clasificación:</h3>
+        <p id="result-text"></p>
+        <div class="explanation">
+            <p id="explanation-text"></p>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/detection.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,98 @@
+/* Contenedor principal */
+.detection-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Estilos del botón de seleccionar archivo */
+input[type="file"] {
+    display: none; /* Ocultamos el input real */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #de0c0c;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.custom-file-upload:hover {
+    background-color: #882121;
+    transform: scale(1.05);
+}
+
+/* Botón de Clasificación */
+.btn-classify {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn-classify:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Vista previa de la imagen */
+#image-preview-container {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    background-color: #f9fdf9;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Contenedor de resultados */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e6f7e6;
+    color: #333;
+    border-radius: 8px;
+    border: 2px solid #28a745;
+    box-shadow: 0px 4px 8px rgba(0, 128, 0, 0.1);
+}
+
+.result h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.result p {
+    font-size: 1.1em;
+}
+
+.explanation {
+    margin-top: 10px;
+    color: #555;
+}

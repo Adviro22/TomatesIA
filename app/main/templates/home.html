@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="home-container">
+    <div class="welcome-section">
+        <h2>Bienvenido a la Detección de Tomates</h2>
+        <p>Con esta aplicación, puedes analizar imágenes en tiempo real para detectar tomates de manera efectiva.</p>
+        <a href="{{ url_for('detection.detection') }}" class="btn-detection">Empezar Detección</a>
+    </div>
+</div>
+{% endblock %}
